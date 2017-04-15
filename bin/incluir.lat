@@ -1,0 +1,7 @@
+#Error: al intentar incluirse a si mismo
+#incluir("incluir")  #Error: Linea 1, 9: No se pudo incluir el modulo 'incluir'
+#Error: los modulos se incluyen sin extension
+#incluir("modulo.lat")  #Error: Linea 1, 9: No se pudo incluir el modulo 'mods.modulo.lat'
+#incluir modulo en carpeta mods/* separar con .
+incluir("mods.modulo")
+escribir(sumatoria(1,2))

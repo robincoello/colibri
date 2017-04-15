@@ -1,0 +1,44 @@
+language: c
+compiler:
+    - gcc
+    - clang
+sudo: false
+os:
+  - linux
+  - osx
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gcc-4.8
+      - g++-4.8
+      - gettext
+      - libintl
+before_install:
+    - pip install --user cpp-coveralls
+    - if [ $TRAVIS_OS_NAME == "linux" ]; then
+        export CC="gcc-4.8";
+        export CXX="g++-4.8";
+        export LINK="gcc-4.8";
+        export LINKXX="g++-4.8";
+      elif [ $TRAVIS_OS_NAME == "osx" ]; then
+        export CC="clang";
+        export CXX="clang++";
+        export LINK="clang";
+        export LINKXX="clang++";
+      fi
+    - gcc --version
+    - g++ --version
+script:
+    - if [ $TRAVIS_OS_NAME == "linux" ]; then
+        ./compilar_gcc.sh;
+        ./run_coverage_gcc.sh;
+      elif [ $TRAVIS_OS_NAME == "osx" ]; then
+        ./compilar_clang.sh;
+        ./run_coverage_clang.sh;
+      fi
+after_success:
+    - cd bin
+    - bash <(curl -s https://codecov.io/bash)
+    - coveralls --exclude lib --exclude tests --gcov-options '\-lp'

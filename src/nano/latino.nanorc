@@ -1,0 +1,43 @@
+## Sintaxis Latino en Nano 
+syntax "latino" "\.lat$"
+color brightblack "\."
+
+# Operadores
+color yellow ":|\*|/|%|\+|-|\^|>|>=|<|<=|!=|="
+
+# Palabras clave
+color green "\<(hacer|fin|mientras|defecto|si|caso|hasta|sino|desde|cuando|salto|romper|retorno)\>"
+
+# Librerias
+color blue "\<(funcion|json_codificar|json_decodificar|sistema|ejecutar_pipe|escribir|imprimir)\>"
+color blue "\<(peticion|elegir|reemplazar|ejecutar_archivo|leer_archivo|escribir_archivo)\>"
+color blue "\<(leer|cadena|longitud)\>"
+
+# falso, nulo ó verdadero
+color brightgreen "verdadero"
+color brightred  "falso"
+
+# Ficheros externos
+color brightblack,white "incluir"
+
+# Numeros
+color brightblack "\<([0-9]+)\>"
+
+# Simbolos
+color brightmagenta "(\(|\)|\[|\]|\{|\})"
+
+# Script en PATH ó ejecución simple
+color cyan   "^#!.*"
+
+# Comentarios simples
+color cyan       "\/\/.*$"
+color cyan       "#.*$"
+
+# Comentarios múltiples
+color cyan       start="\/\*" end="\*\/"
+
+# Strings
+color magenta "\"(\\.|[^\\\"])*\"|'(\\.|[^\\'])*'"
+
+# Hexadecimales
+color brightgreen "0x[0-9a-fA-F]*"
