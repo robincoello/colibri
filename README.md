@@ -46,7 +46,7 @@ Cualquier versión/distribución de linux
 
 
 ### Instalar en Windows
-1. Descargue el instalador de la última version de https://github.com/primitivorm/latino/releases
+1. Descargue el instalador http://lenguaje-latino.org/descargas/
 2. Descompima el archivo zip
 3. Ejecute el instalador
 
