@@ -80,7 +80,7 @@ https://www.microsoft.com/es-ES/download/details.aspx?id=48145
 #### 1- Opción
 ```bash
 # Si instalaste con `sudo make install`:
-sudo ./uninstall.sh
+sudo ./desinstalar.sh
 ```
 
 #### 2- Opción
