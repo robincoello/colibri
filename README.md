@@ -39,7 +39,7 @@ Cualquier versión/distribución de linux
 
 ```bash
  git clone --recursive https://github.com/robincoello/colibri
- cd latino
+ cd colibri
  git submodule update --init --recursive
  cmake .
  make
