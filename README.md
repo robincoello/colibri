@@ -2,8 +2,8 @@
 # Colibrí
 Colibri esta basado en latino 0.8.5 y consiste en quedarse con lo más básico
 que se necesita para programar y con el que seas tu que creas tus propias 
-herrameintas si deseas algo máss completo, listo para usar, sin romperse la
-cabeza, la sopa lista, usa Latino, con Colibri vas a teer que 
+herramientas si deseas algo más completo, listo para usar, sin romperse la
+cabeza, la sopa lista, usa Latino, con Colibri vas a tener que 
 pelar cebollas para la sopa y vas a llorar.
 
 ### Instalar en Linux
